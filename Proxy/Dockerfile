@@ -1,0 +1,8 @@
+FROM dperson/torproxy
+ENV PASSWORD="testpassword"
+ENV EXITNODE="TRUE"
+ENV TORUSER="root"
+EXPOSE 9050
+EXPOSE 9051
+EXPOSE 8118
+

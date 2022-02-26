@@ -1,0 +1,15 @@
+version: '3'
+services:
+  proxy:
+    build: ./Proxy
+    ports:
+      - 9050:9050
+      - 8118:8118
+  orbital-station:
+    build: ./OrbitalStation
+    depends_on:
+      - proxy
+  ip-update:
+    build: ./IpUpdate
+    depends_on:
+      - proxy
