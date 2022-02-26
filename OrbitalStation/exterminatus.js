@@ -4,7 +4,7 @@ import { sleep } from 'k6';
 export let options = {
     noConnectionReuse: false,
     // vus: 20,
-    vus: 20,
+    vus: 2,
     duration: '100000000s'
 }
 function makeid(length) {
@@ -39,7 +39,7 @@ export default function () {
         'https://pfr.gov.ru/',
         'https://rkn.gov.ru/',
         'https://mil.ru'
-    ]
+    ];
 
 
     const params = {
